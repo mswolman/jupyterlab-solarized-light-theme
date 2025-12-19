@@ -2,7 +2,7 @@
 
 [![Github Actions Status](https://github.com/mswolman/jupyterlab-solarized-light-theme/workflows/Build/badge.svg)](https://github.com/mswolman/jupyterlab-solarized-light-theme/actions/workflows/build.yml)
 
-Solarized light theme for Jupyterlab.
+[Solarized light](http://ethanschoonover.com/solarized) theme for Jupyterlab (see also https://github.com/altercation/solarized). This [solarized dark theme](https://github.com/AllanChain/jupyterlab-theme-solarized-dark?tab=readme-ov-file) was used as a reference for this project.
 
 ## Requirements
 
