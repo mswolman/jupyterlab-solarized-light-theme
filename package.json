@@ -186,7 +186,8 @@
             "selector-no-vendor-prefix": null,
             "value-no-vendor-prefix": null,
             "alpha-value-notation": null,
-            "color-function-notation": null
+            "color-function-notation": null,
+            "scss/dollar-variable-no-missing-interpolation": null
         }
     }
 }
