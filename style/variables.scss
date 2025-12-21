@@ -27,7 +27,7 @@ all of MD as it is not optimized for dense, information rich UIs.
 /* Create the solarized light palette.
  * The bases run in increasing brightness.
  */
-@use "sass:color";
+@use 'sass:color';
 
 $solarized-base03: #002b36;
 $solarized-base02: #073642;
@@ -62,19 +62,19 @@ $solarized-base13: color.mix($solarized-base2, $solarized-base1, 30%);
    */
 
   --jp-shadow-base-lightness: 0;
-  --jp-shadow-umbra-color: rgba(
+  --jp-shadow-umbra-color: rgb(
     var(--jp-shadow-base-lightness),
     var(--jp-shadow-base-lightness),
     var(--jp-shadow-base-lightness),
     0.2
   );
-  --jp-shadow-penumbra-color: rgba(
+  --jp-shadow-penumbra-color: rgb(
     var(--jp-shadow-base-lightness),
     var(--jp-shadow-base-lightness),
     var(--jp-shadow-base-lightness),
     0.14
   );
-  --jp-shadow-ambient-color: rgba(
+  --jp-shadow-ambient-color: rgb(
     var(--jp-shadow-base-lightness),
     var(--jp-shadow-base-lightness),
     var(--jp-shadow-base-lightness),
@@ -157,6 +157,7 @@ $solarized-base13: color.mix($solarized-base2, $solarized-base1, 30%);
   --jp-ui-font-color0: #{$solarized-base01};
   --jp-ui-font-color1: #{$solarized-base01};
   --jp-ui-font-color2: #{$solarized-base0};
+
   /* Disabled item */
   --jp-ui-font-color3: #{$solarized-base1};
 
@@ -233,6 +234,7 @@ $solarized-base13: color.mix($solarized-base2, $solarized-base1, 30%);
 
   --jp-layout-color0: #{$solarized-base3};
   --jp-layout-color1: #{$solarized-base25};
+
   /* Note the separator of menu items uses --jp-layout-color2 */
   --jp-layout-color2: #{$solarized-base2};
   --jp-layout-color3: #{$solarized-base18};
@@ -311,10 +313,15 @@ $solarized-base13: color.mix($solarized-base2, $solarized-base1, 30%);
   pixel so that no scrollbar appears if we have just one single-line cell in the
   notebook. This padding is to enable a 'scroll past end' feature in a notebook.
   */
+  /* stylelint-disable scss/operator-no-newline-after */
   --jp-notebook-scroll-padding: calc(
-    100% - var(--jp-code-font-size) * var(--jp-code-line-height) -
-      var(--jp-code-padding) - var(--jp-cell-padding) - 1px
+    100% - var(--jp-code-font-size) *
+      var(--jp-code-line-height) - var(--jp-code-padding) - var(
+        --jp-cell-padding
+      ) -
+      1px
   );
+  /* stylelint-enable scss/operator-no-newline-after */
 
   /* Rendermime styles */
 
@@ -324,7 +331,7 @@ $solarized-base13: color.mix($solarized-base2, $solarized-base1, 30%);
 
   /* Dialog specific styles */
 
-  --jp-dialog-background: rgba(0, 0, 0, 0.4);
+  --jp-dialog-background: rgb(0, 0, 0, 0.4);
 
   /* Console specific styles */
 
@@ -335,7 +342,7 @@ $solarized-base13: color.mix($solarized-base2, $solarized-base1, 30%);
   --jp-toolbar-border-color: var(--jp-layout-color3);
   --jp-toolbar-micro-height: 8px;
   --jp-toolbar-background: var(--jp-layout-color0);
-  --jp-toolbar-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+  --jp-toolbar-box-shadow: 0 0 2px 0 rgb(0, 0, 0, 0.8);
   --jp-toolbar-header-margin: 4px 4px 0 4px;
   --jp-toolbar-active-background: var(--jp-layout-color0);
 
@@ -349,7 +356,11 @@ $solarized-base13: color.mix($solarized-base2, $solarized-base1, 30%);
   --jp-input-hover-background: var(--jp-layout-color2);
   --jp-input-background: var(--jp-layout-color3);
   --jp-input-border-color: var(--jp-border-color2);
-  --jp-input-active-border-color: #{color.mix($solarized-blue, $solarized-base3, 80%)};
+  --jp-input-active-border-color: #{color.mix(
+      $solarized-blue,
+      $solarized-base3,
+      80%
+    )};
   --jp-input-active-box-shadow-color: #268bd24d;
 
   /* General editor styles */
@@ -380,7 +391,11 @@ $solarized-base13: color.mix($solarized-base2, $solarized-base1, 30%);
   --jp-mirror-editor-bracket-color: #997;
   --jp-mirror-editor-tag-color: #{$solarized-green};
   --jp-mirror-editor-attribute-color: #{$solarized-blue};
-  --jp-mirror-editor-header-color: #{color.mix($solarized-blue, $solarized-base02, 90%)};
+  --jp-mirror-editor-header-color: #{color.mix(
+      $solarized-blue,
+      $solarized-base02,
+      90%
+    )};
   --jp-mirror-editor-quote-color: #{$solarized-cyan};
   --jp-mirror-editor-link-color: #{$solarized-blue};
   --jp-mirror-editor-error-color: #{$solarized-red};
@@ -409,7 +424,7 @@ $solarized-base13: color.mix($solarized-base2, $solarized-base1, 30%);
   --jp-inspector-icon-color: #{$solarized-base02};
   --jp-switch-color: #{$solarized-base01};
   --jp-switch-true-position-color: #{$solarized-green};
-  --jp-switch-cursor-color: rgba(0, 0, 0, 0.8);
+  --jp-switch-cursor-color: rgb(0, 0, 0, 0.8);
 
   /* Vega extension styles */
 
@@ -434,7 +449,9 @@ $solarized-base13: color.mix($solarized-base2, $solarized-base1, 30%);
   /* scrollbar related styles. Supports every browser except Edge. */
 
   --jp-scrollbar-background-color: #{$solarized-base3};
-  --jp-scrollbar-thumb-color: 21, 102, 103; /* need to specify thumb color as an RGB triplet */
+  --jp-scrollbar-thumb-color:
+    21, 102, 103; /* need to specify thumb color as an RGB triplet */
+
   --jp-scrollbar-endpad: 3px; /* the minimum gap between the thumb and the ends of a scrollbar */
 
   /* hacks for setting the thumb shape. These do nothing in Firefox */
