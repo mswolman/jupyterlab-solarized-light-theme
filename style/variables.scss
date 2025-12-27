@@ -124,10 +124,10 @@ $solarized-base13: color.mix($solarized-base2, $solarized-base1, 30%);
    */
 
   --jp-border-width: 1px;
-  --jp-border-color0: #{$solarized-base18};
-  --jp-border-color1: #{$solarized-base18};
+  --jp-border-color0: #{$solarized-base1};
+  --jp-border-color1: #{$solarized-base1};
   --jp-border-color2: #{$solarized-base15};
-  --jp-border-color3: #{$solarized-base1};
+  --jp-border-color3: #{$solarized-base2};
   --jp-border-radius: 2px;
 
   /* UI Fonts
